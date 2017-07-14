@@ -6,34 +6,8 @@
   </head>
   <body>
     <h1>Planetas</h1>
-    <script>
-    function getJSON(url) {
-      return new Promise(function(resolve, reject) {
-        var ajax = new XMLHttpRequest();
-        var url = "data/earth-like-results.json";
-        ajax.open("GET", url);
-        ajax.send();
-        ajax.onreadystatechange = function(data) {
-          if (ajax.readyState == 4) {
-            var response= JSON.parse(ajax.responseText);
-            resolve(response);
-          };
-        };
-      });
-    };
-
-    getJSON("data/earth-like-results.json")
-    .then(function(planetas){return(getJSON(planetas.results[0]))})
-    .then(function(datos){console.log(datos)})
-
-    getJSON("data/earth-like-results.json")
-    .then(function(response){
-      return getJSON(response.results[0])
-    })
-    .then(function(responsePlanet){
-      console.log(responsePlanet)
-    })
-
+    <div></div>
+    <script src="static/js/app.js">
     </script>
   </body>
 </html>
